@@ -10,16 +10,16 @@ SimpleConfig.for :application do
   set :app_name, 'icare'
   set :repository_url, 'http://github.com/diowa/icare'
 
-  set :advertising, true
-  set :demo_mode, true
+  set :advertising, false
+  set :demo_mode, false
   set :base_url, 'localhost:3000'
   set :single_process_mode, true
 
-  set :currency, '.00 €'
-  set :fuel_consumption, 0.12
-  set :fuel_currency, '€'
+  set :currency, '.00 MUR'
+  set :fuel_consumption, 3.83
+  set :fuel_currency, 'MUR'
 
-  set :costs_calculation_service_link, 'http://servizi.aci.it/CKInternet/'
+  set :costs_calculation_service_link, ''
 
   set :google_analytics_id, nil
   set :google_maps_api_key, nil
@@ -41,18 +41,18 @@ SimpleConfig.for :application do
   end
 
   group :map do
-    # defaults to Italy
-    set :center, [41.87194, 12.567379999999957]
+    # defaults to MRU
+    set :center, [-20.34840400, 57.55215200]
     set :zoom, 8
   end
 
   group :itineraries do
     # Enable this option if you want to restrict itineraries inside a geographic area
-    set :geo_restricted, false
+    set :geo_restricted, true
     group :bounds do
-      # Island of Ischia
-      set :sw, [40.69205729999999, 13.850980400000026]
-      set :ne, [40.7615088, 13.966879699999936]
+      # MRU
+      set :sw, [-20.52551210, 56.51271810]
+      set :ne, [-10.31925480, 63.50359450]
     end
   end
 
